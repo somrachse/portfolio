@@ -1,12 +1,12 @@
 export default function Services() {
   const services = [
-    { title: 'Portfolio', logo: '/img/portfolio.svg', desc: 'Personal portfolio projects.' },
-    { title: 'POS System', logo: '/img/pos.svg', desc: 'Point-of-sale systems for retail businesses.' },
-    { title: 'Salary Management', logo: '/img/salary.svg', desc: 'Payroll and salary management solutions.' },
-    { title: 'Inventory System', logo: '/img/inventory.svg', desc: 'Inventory tracking and stock control.' },
-    { title: 'E‑commerce', logo: '/img/ecommerce.svg', desc: 'Online stores and e‑commerce integrations.' },
-    { title: 'Video Editing', logo: '/img/video.svg', desc: 'Video editing and creative post-production.' },
-    { title: 'MIS', logo: '/img/mis.svg', desc: 'Management Information Systems implementation.' },
+    { title: 'Portfolio', logo: 'img/portfolio.svg', desc: 'Personal portfolio projects.' },
+    { title: 'POS System', logo: 'img/pos.svg', desc: 'Point-of-sale systems for retail businesses.' },
+    { title: 'Salary Management', logo: 'img/salary.svg', desc: 'Payroll and salary management solutions.' },
+    { title: 'Inventory System', logo: 'img/inventory.svg', desc: 'Inventory tracking and stock control.' },
+    { title: 'E‑commerce', logo: 'img/ecommerce.svg', desc: 'Online stores and e‑commerce integrations.' },
+    { title: 'Video Editing', logo: 'img/video.svg', desc: 'Video editing and creative post-production.' },
+    { title: 'MIS', logo: 'img/mis.svg', desc: 'Management Information Systems implementation.' },
   ];
 
   return (
