@@ -48,7 +48,7 @@ export default function About() {
             I design intuitive interfaces, build responsive portfolios, produce engaging videos, and deliver tailored MIS solutions that help clients communicate and operate more effectively.
           </p>
           <div className="flex gap-4 mb-6">
-            <a href="/img/CV.pdf" download="CV.pdf" className="bg-orange-500 text-white px-8 py-3 rounded font-medium hover:bg-orange-600 transition inline-block">
+            <a href="img/CV.pdf" download="CV.pdf" className="bg-orange-500 text-white px-8 py-3 rounded font-medium hover:bg-orange-600 transition inline-block">
               Download CV
             </a>
           </div>
