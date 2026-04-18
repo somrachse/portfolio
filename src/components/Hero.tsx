@@ -64,7 +64,11 @@ export default function Hero() {
       {/* Right Image */}
       <div className="flex-1 flex justify-center">
         <div className="w-64 h-64 md:w-72 md:h-72 rounded-lg flex items-center justify-center">
-          <img src="img/P1.JPG" />
+          <img
+            src="img/P1.JPG"
+            alt="Profile Picture"
+            className="w-48 h-48 object-cover rounded-full border-4 border-white shadow-lg"
+          />
         </div>
       </div>
 
