@@ -30,7 +30,7 @@ export default function Contact() {
   // 2. Use your Token and Chat ID directly
   // Note: These will be visible in your source code!
   const botToken = "8232185535:AAHiyj0X-oUzCpvJgkdFb2FNvbP4zZoQkbg";
-  const chatId = "YOUR_CHAT_ID_HERE";
+  const chatId = "831903549";
 
   try {
     const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
