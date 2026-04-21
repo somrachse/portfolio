@@ -17,13 +17,29 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
+  // 1. Prepare the message text
+  const messageText = `
+    New Message from Portfolio:
+    Name: ${formData.name}
+    Email: ${formData.email}
+    Phone: ${formData.phone}
+    Service: ${formData.service}
+    Message: ${formData.message}
+  `;
+
+  // 2. Use your Token and Chat ID directly
+  // Note: These will be visible in your source code!
+  const botToken = "8232185535:AAHiyj0X-oUzCpvJgkdFb2FNvbP4zZoQkbg";
+  const chatId = "YOUR_CHAT_ID_HERE";
+
   try {
-    const res = await fetch("/api/telegram", {
+    const res = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData)
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: messageText,
+      }),
     });
 
     if (res.ok) {
