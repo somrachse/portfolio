@@ -14,11 +14,29 @@ export default function Contact() {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const res = await fetch("/api/telegram", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    if (res.ok) {
+      alert("Message sent to Telegram ✅");
+      setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+    } else {
+      alert("Failed to send ❌");
+    }
+  } catch (err) {
+    alert("Error ❌");
+    console.error(err);
+  }
+};
 
   return (
     <section id="contact" className="px-6 md:px-12 py-16 bg-gray-50">
